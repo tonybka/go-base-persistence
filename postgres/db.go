@@ -5,7 +5,6 @@ import (
 	"strings"
 
 	"github.com/tonybka/go-base-persistence/config"
-	"go.uber.org/zap"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -15,8 +14,6 @@ var DBConn *gorm.DB
 // ConnectDB connects to postgresQL database and create singleton DB connection
 func ConnectDB(configs *config.DatabaseConfig) error {
 	var err error
-	sugar := zap.NewExample().Sugar()
-	defer sugar.Sync()
 
 	urls := strings.Split(configs.DBEndPoint, ":")
 	dsn := fmt.Sprintf("host=%v port=%v dbname=%v sslmode=disable", urls[0], urls[1], configs.DBName)
@@ -35,6 +32,17 @@ func ConnectDB(configs *config.DatabaseConfig) error {
 		return err
 	}
 
-	sugar.Infof("connected to %s", configs.DBEndPoint)
+	fmt.Printf("connected to database: %s\n", configs.DBEndPoint)
+	return nil
+}
+
+// CloseDBConn closes given database connection
+func CloseDBConn(db *gorm.DB) error {
+	dbSQL, err := db.DB()
+	if err != nil {
+		return err
+	}
+	dbSQL.Close()
+
 	return nil
 }
