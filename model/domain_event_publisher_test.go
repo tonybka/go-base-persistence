@@ -7,6 +7,7 @@ import (
 	"github.com/tonybka/go-base-persistence/mock"
 )
 
+// TestRegisterEventHandler ensure handler registration works
 func TestRegisterEventHandler(t *testing.T) {
 	eventPublisher := InitDomainEventPublisher()
 	assert.NotNil(t, eventPublisher)
@@ -17,6 +18,7 @@ func TestRegisterEventHandler(t *testing.T) {
 	eventPublisher.RegisterSubscriber(event, handler)
 }
 
+// TestPublishDomainEvent ensure the handler was notified once event triggered
 func TestPublishDomainEvent(t *testing.T) {
 	eventPublisher := InitDomainEventPublisher()
 	assert.NotNil(t, eventPublisher)

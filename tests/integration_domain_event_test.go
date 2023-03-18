@@ -8,6 +8,7 @@ import (
 	"github.com/tonybka/go-base-persistence/model"
 )
 
+// TestAssignDomainEvent aims to ensure that the new events can be added to model
 func TestAssignDomainEvent(t *testing.T) {
 	testEventName := "Name"
 	testEventID := "ID"
