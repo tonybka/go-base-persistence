@@ -5,9 +5,9 @@ import (
 	"gorm.io/gorm"
 )
 
-//=----------------------
+// =----------------------
 // DomainEventPublisher
-//=----------------------
+// =----------------------
 type DomainEventPublisher struct {
 	eventHandlers map[string][]event.IDomainEvenHandler
 }
@@ -46,9 +46,9 @@ func (publisher *DomainEventPublisher) Publish(tx *gorm.DB, events ...event.IBas
 	return nil
 }
 
-//=-------------------------------
+// =-------------------------------
 // DomainEventPublisher singleton
-//=-------------------------------
+// =-------------------------------
 var singletonEventPublisher *DomainEventPublisher
 
 func GetDomainEventPublisher() *DomainEventPublisher {

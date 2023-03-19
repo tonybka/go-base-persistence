@@ -12,6 +12,11 @@ type BaseModel struct {
 	PendingEvents []event.IBaseDomainEvent `gorm:"-"`
 }
 
+func NewBaseModel(id uint) BaseModel {
+	model := gorm.Model{ID: uint(id)}
+	return BaseModel{Model: model}
+}
+
 // publishOngoingEvents publish all events that occurred
 func (model *BaseModel) publishOngoingEvents(tx *gorm.DB) error {
 	publisher := GetDomainEventPublisher()
