@@ -19,7 +19,7 @@ func NewBaseModel(id uint) BaseModel {
 
 // publishOngoingEvents publish all events that occurred
 func (model *BaseModel) publishOngoingEvents(tx *gorm.DB) error {
-	publisher := GetDomainEventPublisher()
+	publisher := event.GetDomainEventPublisher()
 	if publisher == nil {
 		return errors.New("invalid domain event publisher")
 	}

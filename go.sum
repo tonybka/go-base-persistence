@@ -40,6 +40,8 @@ github.com/tonybka/go-base-ddd v0.0.0-20230314063414-831c9134a19c h1:z59XwdnCN30
 github.com/tonybka/go-base-ddd v0.0.0-20230314063414-831c9134a19c/go.mod h1:pizf1GOSu29+9i8433/3t9GrB6rnWTVsvL4qNF69hBs=
 github.com/tonybka/go-base-ddd v0.0.0-20230314063942-18ea5fcb6683 h1:zJaJPJwM7CthsGPR3EQaCkMfAzYiHdB8V0K3KNew7b4=
 github.com/tonybka/go-base-ddd v0.0.0-20230314063942-18ea5fcb6683/go.mod h1:pizf1GOSu29+9i8433/3t9GrB6rnWTVsvL4qNF69hBs=
+github.com/tonybka/go-base-ddd v0.0.0-20230409072557-a754df02da3e h1:a4HY/mAfdL568vMSDNEs12i8WJ5rIcSXZ8RCjYyMwI0=
+github.com/tonybka/go-base-ddd v0.0.0-20230409072557-a754df02da3e/go.mod h1:pizf1GOSu29+9i8433/3t9GrB6rnWTVsvL4qNF69hBs=
 github.com/yuin/goldmark v1.4.13/go.mod h1:6yULJ656Px+3vBD8DxQVa3kxgyrAnzto9xy5taEt/CY=
 go.uber.org/atomic v1.10.0 h1:9qC72Qh0+3MqyJbAn8YU5xVq1frD8bn3JtD2oXtafVQ=
 go.uber.org/atomic v1.10.0/go.mod h1:LUxbIzbOniOlMKjJjyPfpl4v+PKK2cNJn91OQbhoJI0=
