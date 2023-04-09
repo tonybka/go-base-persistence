@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	"github.com/tonybka/go-base-persistence/mock"
+	"github.com/tonybka/go-base-ddd/domain/event"
 	"github.com/tonybka/go-base-persistence/model"
 )
 
@@ -13,7 +13,7 @@ func TestAssignDomainEvent(t *testing.T) {
 	testEventName := "Name"
 	testEventID := "ID"
 
-	events := []*mock.MockDomainEventStruct{{EventName: testEventName, EventID: testEventID}}
+	events := []*event.MockDomainEventStruct{{EventName: testEventName, EventID: testEventID}}
 
 	model := model.BaseModel{}
 	for _, event := range events {
